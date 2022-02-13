@@ -2,38 +2,10 @@
 #include <math.h>
 #include <stdbool.h>
 
-float get_float(void)
-{
- int response = 0;
- float x = 0;
- response = scanf("%f", &x);
- if (response == 1) return x; else {
-   printf("Введите числовые значения и перезапустите программу\n");
-   exit(1);
-   }
-}
-
-bool is_integer(float x)
-{
-  return ((int)x == x);
-}
-
-bool is_even(int x)
-{
-  int mod = (int)x % 2;
-  if (mod == 0){
-      return true;
-  }
-  else return false;
-}
-
-void even_message(float x) 
-{
-  if (is_integer(x)) {
-    if (is_even((int)x)) printf("(четное)\n");
-    else printf("(не четное)\n");
-  }
-}
+float get_float(void);
+bool is_integer(float x);
+bool is_even(int x);
+void even_message(float x);
 
 int main(void) {
   printf("start\n");
@@ -80,4 +52,41 @@ int main(void) {
 
   printf("end\n");
   return 0;
+}
+
+
+float get_float(void)
+{
+ int response = 0;
+ float x = 0;
+ response = scanf("%f", &x);
+ if (response == 1) return x; else {
+   printf("Введите числовые значения и перезапустите программу\n");
+   exit(1);
+   }
+}
+
+
+bool is_integer(float x)
+{
+  return ((int)x == x);
+}
+
+
+bool is_even(int x)
+{
+  int mod = (int)x % 2;
+  if (mod == 0){
+      return true;
+  }
+  else return false;
+}
+
+
+void even_message(float x) 
+{
+  if (is_integer(x)) {
+    if (is_even((int)x)) printf("(четное)\n");
+    else printf("(не четное)\n");
+  }
 }
