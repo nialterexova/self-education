@@ -1,0 +1,9 @@
+N,in_metro,out_metro = map(int,input().split())
+
+clockwise = abs(out_metro - in_metro)-1
+antiClockwise = N - clockwise-2
+
+if clockwise>antiClockwise:
+	print(antiClockwise)
+else:
+	print(clockwise)
