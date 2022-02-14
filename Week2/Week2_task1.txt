@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-
 int main(void) {
   int a = 0;
   int b = 0;
@@ -10,6 +9,11 @@ int main(void) {
   float x_1 = 0;
   float x_2 = 0;
   float d = 0;
+  float x_1_res = 0;
+  float x_2_res = 0;
+  int y_1 = 0;
+  int y_2 = 0;
+
 
   scanf("%i", &a);
   scanf("%i", &b);
@@ -22,7 +26,20 @@ int main(void) {
   if (d > 0) {
   x_1 = (-1*b + sqrt(d)) /2*a;
   x_2 = (-1*b - sqrt(d)) /2*a;
+
   printf("Дискриминант = %f, x_1= %f, x_2= %f\n", d, x_1, x_2);
+  int y_1 = x_1;
+  int y_2 = x_2;
+  
+    if (y_1 % 2 == 0) {
+    printf("x_1 - четное число \n" );   
+    }
+
+    if (y_2 % 2 == 0) {
+    printf("x_2 - четное число \n" );   
+    }
+    
+    
   }
 
   if (d == 0) {
@@ -33,7 +50,6 @@ int main(void) {
   if (d < 0) {           
   printf("Дискриминант = %f, у исходного уравнения корней нет.\n", d);
   }
-
 
   return x;
 }
