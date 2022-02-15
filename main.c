@@ -42,7 +42,7 @@ printf ("%f", x1);
 
 float y1=x1-(int)x1;
 int y2=(int)x1;
-printf ("%i\n", y1);
+
 if (y1==0)
 {
 printf ("x1 целое число\n");
@@ -58,7 +58,9 @@ else
 {
 printf ("x1 не целое\n");
 }
-if (k==2)
+if (k==1)
+{return 0;}
+else if (k==2)
 {
 if (x2==round(x2))
 {
@@ -71,7 +73,7 @@ printf ("x2 чётное число\n");
 }
 else 
 {
-printf ("x2 не целое");
+printf ("x2 нечетное\n");
 }
 }
 else
