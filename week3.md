@@ -44,4 +44,4 @@ https://www.youtube.com/watch?v=QLhqYNsPIVo
 3) https://javarush.ru/quests/lectures/questharvardcs50.level02.lecture06
 4) Python https://contest.yandex.ru/contest/28730/problems/D/
 5) Python https://contest.yandex.ru/contest/28730/problems/E/
-6) ** Python https://contest.yandex.ru/contest/28724/problems/C/
+(повышенный уровень - доп) ** Python https://contest.yandex.ru/contest/28724/problems/C/
