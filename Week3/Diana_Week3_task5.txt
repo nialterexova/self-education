@@ -1,0 +1,21 @@
+#Яндекс не принимает(
+
+import math
+
+d = int(input())
+punkt_x = [int(x) for x in input().split()]
+
+x = punkt_x[0]
+y = punkt_x[1]
+
+BC = 2 * math.sqrt(d)
+half_BC = BC/2
+
+if (x > 0 and y > 0) and (((x <= d) and (y <= BC/2)) or ((x <= BC/2) and (y <= d))):
+    print(0)
+elif (x < 0 and y < 0) or (x <= half_BC and y < 0) or (x < 0 and y <= half_BC):
+    print(1)
+elif (x >= half_BC and y < d/2) or (x >= d and y <= d):
+    print(2)
+else:
+    print(3)
