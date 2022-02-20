@@ -1,0 +1,5 @@
+from statistics import median
+import math
+n = input()
+print(math.ceil(median([int(x) for x in input().split()])))
+
