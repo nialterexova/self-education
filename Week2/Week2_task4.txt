@@ -1,9 +1,5 @@
-import os,sys
-import pandas as pd
-import numpy as np
-
-
-print("Введите кол-во станций N, номер станции у дома Х-1, норме станции у работы Х-1 :")
+# C комментами
+print("Введите кол-во станций N, номер станции у дома i, норме станции у работы j:")
 df_list = [int(x) for x in input().split()]
 
 n = df_list[0]
@@ -18,10 +14,14 @@ if j == i or j==0 or i==0:
     print('Неверно введены номера станций.')
     sys.exit("На проблему напали, код остановлен")
     
-    
-a_0 = i 
-а_1 = j - i
-a_2 = n - j
+if i < j:
+    a_0 = i 
+    а_1 = j - i
+    a_2 = n - j
+else:
+    a_0 = j 
+    а_1 = i - j
+    a_2 = n - i
 
 if а_1 < (a_0 + a_2):
     e = abs(а_1 - 1)
@@ -29,3 +29,30 @@ else:
     e = abs((a_0 + a_2) - 1)
     
 print('Необходимо проехать', e, ' станцию/й.')
+
+
+
+
+# Для Яндекса
+df_list = [int(x) for x in input().split()]
+
+n = df_list[0]
+i = df_list[1]
+j = df_list[2]
+
+   
+if i < j:
+    a_0 = i 
+    а_1 = j - i
+    a_2 = n - j
+else:
+    a_0 = j 
+    а_1 = i - j
+    a_2 = n - i
+
+if а_1 < (a_0 + a_2):
+    e = abs(а_1 - 1)
+else:
+    e = abs((a_0 + a_2) - 1)
+    
+print(e)
