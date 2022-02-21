@@ -19,9 +19,6 @@ int main()
                 if (Change >= 0.00)
                     CorrectInput = false;
         }
-        
-        if (Change > 0)
-        {
                 IntChange = Change*100;
                 TenCent = IntChange % 25;
                 FiveCent = TenCent % 10;
@@ -32,6 +29,6 @@ int main()
                 FiveCent = FiveCent / 5;
                 OneCent = OneCent / 1;
                     printf("%d номиналом 25 центов\n%d номиналом 10 центов\n%d номиналом 5 центов\n%d номиналом 1 центов\n", TwentyFiveCent, TenCent, FiveCent, OneCent);
-        }
+        
 return 0;
 }
