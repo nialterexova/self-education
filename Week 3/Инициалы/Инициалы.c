@@ -4,14 +4,18 @@
 void print_FIO(char separator){
   int symbol = toupper(getchar());
   printf("%c", symbol);
-  while (symbol != separator) {
-    symbol = getchar();
+  while (symbol != '\n'){
+    while (symbol != separator && symbol != '\n') {
+      symbol = getchar();
+    }
+  if (symbol == separator){
+    symbol = toupper(getchar());
+    printf("%c", symbol);
+    }
   }
-  symbol = toupper(getchar());
-  printf("%c\n", symbol);
+  printf("\n");
 }
   
-
 int main() {
   print_FIO(' ');
   return 0;
