@@ -26,14 +26,14 @@ int main()
     }
     
     average = (float) SumCoordinates / students;
-    CoordinatHouse = average;
+    CoordinatSchool = average;
     
     if (average - (int) average > 0.5)
     {
-        CoordinatSchool = CoordinatSchool ++;
+        CoordinatSchool = CoordinatSchool + 1;
     }
     
-    printf("%d", CoordinatHouse);
+    printf("%d", CoordinatSchool);
     
     return 0;
 }
