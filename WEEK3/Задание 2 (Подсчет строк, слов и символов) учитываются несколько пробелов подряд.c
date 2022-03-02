@@ -20,6 +20,8 @@ int main(void)
     
     for(int i = 0; i < strlen(FIO); i++)
     {
+        if(FIO[i-1] == 32 || FIO[i-1] == 9 || FIO[i-1] == 182)
+            continue;
         if(FIO[i] == 32 || FIO[i] == 9 || FIO[i] == 182)
             words++;
     }
@@ -33,7 +35,7 @@ int main(void)
     
     for(int i = 0; i < strlen(FIO); i++)
     {
-        if(FIO[i] == 9 || FIO[i] == 32 ||FIO[i] == 182)
+        if(FIO[i] == 9 || FIO[i] == 32 && FIO[i-1] != 9 && FIO[i-1] != 32)
             FIO [i] = '\n';
     }
     puts (FIO);
