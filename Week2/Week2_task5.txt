@@ -1,0 +1,61 @@
+
+#include <stdio.h>
+#include <math.h>
+
+float get_int(void);
+
+int main(void) {
+    float rest = get_int();
+    float m_25 = 0.25;
+    float m_10 = 0.10;
+    float m_05 = 0.05;
+    float m_01 = 0.01;
+    
+    float rest_25 = 0;
+    float rest_10 = 0;
+    float rest_05 = 0;
+    float rest_01 = 0;
+    
+    float all = 0;
+    
+    printf("Сдача всего:  %.2f\n", rest);
+    
+    rest_25 = (rest - fmod (rest, m_25)) / m_25;
+    rest = rest - (rest_25 * m_25);
+    printf("Номиналом 0.25:  %.0f\n", rest_25);
+    
+    if (rest > 0) {
+        rest_10 = (rest - fmod (rest, m_10)) / m_10;
+        rest = rest - (rest_10 * m_10);
+        printf("Номиналом 0.10:  %.0f\n", rest_10);
+    }
+        if (rest > 0) {
+            rest_05 = (rest - fmod (rest, m_05)) / m_05;
+            rest = rest - (rest_05 * m_05);
+            printf("Номиналом 0.05:  %.0f\n", rest_05);
+        }
+            if (rest > 0) {
+                rest_01 = rest / m_01;
+                printf("Номиналом 0.01:  %.0f\n", rest_01);
+            }  
+            
+all = (rest_25 + rest_10 + rest_05 + rest_01);
+printf("Минимальное количество монет: %.0f", all);
+        
+
+    return 0;
+}
+
+
+
+float get_int(void) {
+ float response = 0;
+ float x = 0;
+ response = scanf("%f", &x);
+ if (response >= 1)
+    return x; 
+ else {
+   printf("Введите сдачу:\n");
+
+ } 
+}
