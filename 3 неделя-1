@@ -1,0 +1,43 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+int r,i,c,b;
+printf("Введите код завершения\n");
+scanf("%i",&r);
+printf("Введите вердикт интерактора\n");
+scanf("%i",&i);
+printf("Введите вердикт чекера\n");
+scanf("%i",&c);
+  if (i==0)
+    {if (r==0)
+        {b=c;}
+    else (b=3);
+    printf ("результат-%i",b);
+    return 0;
+    }
+  else
+    {if (i==1)
+        {b=c;
+        printf ("результат-%i",b);
+        return 0;
+        }
+     else 
+        {if (i==4)
+            {if (r==0)
+                {b=4;}
+            else
+                {b=3;}}
+        else 
+            {if (i==6)
+                {b=0;}
+            else 
+            {if (i==7)
+                {b=1;}
+             else (b=i); 
+            }}}}
+
+printf ("результат-%i",b);
+return 0;
+}
