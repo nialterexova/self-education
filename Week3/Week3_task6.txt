@@ -1,0 +1,25 @@
+
+import pandas as pd
+
+line_1 = [int(x) for x in input().split()]
+line_2 = [int(x) for x in input().split()]
+line_3 = [int(x) for x in input().split()]
+
+matrix = pd.DataFrame(line_1 + line_2 + line_3,  columns= ['Matrix'])
+
+matrix_count = matrix.value_counts().sort_index().reset_index()
+
+condition_0 = matrix[matrix['Matrix'].astype('str').str.contains('0') == True].count().values[0]
+condition_1 = matrix[matrix['Matrix'].astype('str').str.contains('1') == True].count().values[0]
+condition_2 = matrix[matrix['Matrix'].astype('str').str.contains('2') == True].count().values[0]
+
+if (len(matrix_count) > 1) and (((condition_1-condition_2) == 1) or (condition_1 == condition_2)):
+    print('YES')
+
+elif (condition_0 == 9) or ((condition_1 == 1) and (condition_2 == 0)):
+    print('YES')
+     
+else:
+    print('NO')
+        
+        
