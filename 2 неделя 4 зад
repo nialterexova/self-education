@@ -1,0 +1,38 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+int r,i,c;
+  int (b);
+scanf("%i",&r,&i,&c);
+  
+  if (i=0)
+  {if (r=0)
+      {b=c};
+      else 
+      {b=3};
+      printf (%i, &b);
+    return 0;}
+  if (i=1)
+  {b=c;
+    printf (%i, &b);
+    return 0;}
+  if (i=4)
+  {if (r=0)
+  {b=4;}
+    else
+    {b=3};
+    printf (%i, &b);
+    return 0;}
+  if (i=6)
+  {b=0;
+  printf (%i, &b);
+    return 0;}
+  if (i=7)
+  {b=1;
+    printf (%i, &b);
+    return 0;}
+  b=i;
+printf (%i, &b);
+return 0;}
