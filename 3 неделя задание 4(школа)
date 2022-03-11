@@ -1,0 +1,7 @@
+import statistics
+n = int(input())
+h = input()
+h = h.split(" ",n)
+h=list(map(int,h))
+s=statistics.median(h)
+print(int(s))
