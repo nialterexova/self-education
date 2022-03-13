@@ -19,10 +19,10 @@ da=math.sqrt((xa-x)**2+(ya-y)**2)
 db=math.sqrt((xb-x)**2+(yb-y)**2)
 dc=math.sqrt((xc-x)**2+(yc-y)**2)   
 
-if da<=db and da<=dc:
+if (da<=db and da<=dc):
     print("1")
     sys.exit("фсё!") 
-if db<=da and db<=dc:
+elif (db<=da and db<=dc):
     print ("2")
     sys.exit("фсё!")    
 else:
