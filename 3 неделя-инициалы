@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{char a[20];
+scanf("%s", a);
+a[0] += 'A'-'a';
+printf ("%c",a[0]);
+int i=1;
+while (a[i] != EOF)
+{
+    if (a[i]==' ')
+    {
+        i++;
+        a[i]=getchar ();
+        a[i] += 'A'-'a';
+        printf ("%c",a[i]);
+    }
+    i++;
+    a[i]=getchar ();
+}
+return 0;
+}
