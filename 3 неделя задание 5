@@ -1,0 +1,30 @@
+import math
+import sys
+
+d=int(input())
+x=int(input())
+y=int(input())
+xa=ya=yb=xc=0
+xb=yc=d
+k=x+y-d
+k1=(xa-x)*(yb-ya)-(xb-xa)*(ya-y)
+k2=(xb-x)*(yc-yb)-(xc-xb)*(yb-y)
+k3=(xc-x)*(ya-yc)-(xa-xc)*(yc-y)
+
+if (k1>0 and k2>0 and k3>0) or (k1<0 and k2<0 and k3<0) or (k1==0 or k2==0 or k3==0):
+    print("0")
+    sys.exit("фсё!") 
+ 
+da=math.sqrt((xa-x)**2+(ya-y)**2)
+db=math.sqrt((xb-x)**2+(yb-y)**2)
+dc=math.sqrt((xc-x)**2+(yc-y)**2)   
+
+if (da<=db and da<=dc):
+    print("1")
+    sys.exit("фсё!") 
+elif (db<=da and db<=dc):
+    print ("2")
+    sys.exit("фсё!")    
+else:
+    print("3")
+    
