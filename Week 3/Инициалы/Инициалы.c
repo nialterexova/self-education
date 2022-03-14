@@ -8,10 +8,11 @@ void print_FIO(char separator){
     while (symbol != separator && symbol != '\n') {
       symbol = getchar();
     }
-  if (symbol == separator){
-    symbol = toupper(getchar());
-    printf("%c", symbol);
+    while (symbol == separator || symbol == '\n'){
+      symbol = getchar();
     }
+    symbol = toupper(symbol);
+    printf("%c", symbol);
   }
   printf("\n");
 }
