@@ -1,0 +1,17 @@
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{int a,b,m,k,e;
+printf("введи 3 целых числа\n");
+a,b,m = scanf("%d%d%d",&a,&b,&m);
+k=abs(m-b-1);
+e=abs(a-b-1+m);
+if (k<=e)
+    {printf("%d",k);
+    return 0;}
+else
+    {printf ("%d",e);
+    return 0;}
+return 0;
+}
