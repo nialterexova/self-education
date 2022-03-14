@@ -1,4 +1,16 @@
-inp=input('Введите количество станций, посадочную станцию и конечную(Через пробел): ').split(' ')
+inp=input().split(' ')
+if int(inp[1])<int(inp[2]):
+    if int(inp[2])-int(inp[1])-1>int(inp[0])-int(inp[2])+int(inp[1])-1:
+        print(abs(int(inp[0])-int(inp[2])+int(inp[1])-1))
+    else:
+        print(abs(int(inp[2])-int(inp[1])-1))
+else:
+    if int(inp[1]) - int(inp[2]) - 1> int(inp[0]) - int(inp[1])+int(inp[2])-1:
+        print(abs(int(inp[0]) - int(inp[1])+int(inp[2])-1))
+    else:
+        print(abs(int(inp[1]) - int(inp[2]) - 1))
+# *** Старый код
+# inp=input().split(' ')
 x=0
 while x!=1:
     try:
