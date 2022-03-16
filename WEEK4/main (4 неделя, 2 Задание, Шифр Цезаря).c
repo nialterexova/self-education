@@ -29,8 +29,6 @@ int main() {
         printf("%c", text);
         }
         ReallyCondition = 1;
-        if (text > -1)
-            ReallyCondition = 1;
     }
     return 0;
 }
