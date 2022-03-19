@@ -5,8 +5,10 @@
 #include <string.h>
 #include <ctype.h>
 
+
 char *getStringFromConsoleInput();
 char *cipher();
+
 
 int main(int argc, char **argv) {
   if (argc != 2){
@@ -23,6 +25,7 @@ int main(int argc, char **argv) {
   return 0;
 }
 
+
 char *cipher(int argc, char **argv){
   char *str = getStringFromConsoleInput();
   int place = 0;
@@ -30,7 +33,12 @@ char *cipher(int argc, char **argv){
   int symbol = 0;
   for (int numbers = 0; numbers <= strlen(str); numbers++){
     if (str[numbers] >= 65 && str[numbers] <= 90){
-      displacement = (int)(argv[1][place]) - 65 - 32;
+      if ((int)(argv[1][place]) >= 65 && (int)(argv[1][place]) <= 90){
+        displacement = (int)(argv[1][place]) - 65;
+      }
+      else{
+        displacement = (int)(argv[1][place]) - 65 - 32;
+      }
       symbol = str[numbers] + displacement;
       place += 1;
       if (symbol <= 90){
@@ -42,7 +50,12 @@ char *cipher(int argc, char **argv){
       }
     }
     else if (str[numbers] >= 97 && str[numbers] <= 122){
-      displacement = (int)(argv[1][place]) - 97;
+      if ((int)(argv[1][place]) >= 65 && (int)(argv[1][place]) <= 90){
+        displacement = (int)(argv[1][place]) - 65;
+      }
+      else{
+        displacement = (int)(argv[1][place]) - 65 - 32;
+      }
       symbol = str[numbers] + displacement;
       place += 1;
       if (symbol <= 122){
@@ -61,6 +74,7 @@ char *cipher(int argc, char **argv){
     }
   }
 }
+
 
 char *getStringFromConsoleInput() {
   char c;                
