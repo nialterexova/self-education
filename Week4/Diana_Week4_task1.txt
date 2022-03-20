@@ -64,7 +64,7 @@ float get_int(void) {
  if (response >= 1)
     return x; 
  else {
-   printf("Введите сдачу:\n");
+   printf("Введите повторно:\n");
 
  }
 }
