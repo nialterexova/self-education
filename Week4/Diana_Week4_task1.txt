@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h> 
+#include <conio.h>
+
+float get_int(void);
+
+int main(void) {
+  srand(time(NULL));
+  
+  printf("Количетво лет наблюдений:\n");
+  int years = get_int();
+  
+  int a[years];
+  int b[years];
+  float sd[years];
+  
+  int summ = 0;
+  float mean = 0;
+  int below = 0;
+  int above = 0;
+  
+for (int i=1; i<= years; i++) { 
+    a[i] = (300 + rand()%500);
+    b[i] = a[i] - (a[i] % 10);
+    summ = summ + b[i];
+    printf("Осадки %i год: ", i);
+    printf("%i\n", b[i]);
+} 
+   printf("Сумма осадков: %i\n\n", summ);
+   
+   mean = summ/years;
+   printf("Среднее кол-во осадков: %.1f\n", mean);
+    
+for (int i=1; i<= years; i++) { 
+    sd[i] = b[i] - mean;
+    printf("Отклонение осадков %i год: ", i);
+    printf("%.0f\n", sd[i]);
+}   
+
+
+for (int i=1; i<= years; i++) { 
+    if (sd[i] >= 0 ) 
+        above = above +1;
+    
+    else 
+      below = years - above;  
+    
+}   
+    printf("Кол-во лет выше среднего по кол-ву осадков - %i года/лет. \n", above);
+    printf("Кол-во лет ниже среднего по кол-ву осадков - %i года/лет. ", below);
+
+    return 0;
+
+    
+    
+}
+
+
+float get_int(void) {
+ float response = 0;
+ float x = 0;
+ response = scanf("%f", &x);
+ if (response >= 1)
+    return x; 
+ else {
+   printf("Введите повторно:\n");
+
+ }
+}
