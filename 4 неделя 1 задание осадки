@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int a[];
+int x,i,s;
+int ran(void); 
+
+int main(void) 
+{
+s=scanf("%d",&s);
+printf("%d\n",s);
+
+for (i=0;i<s;i++)
+{
+    a[i]= ran();
+    printf("%d\n",x);
+    printf("Осадки в год № %d %i мм\n",i+1,a[i]);
+}
+getchar();
+return 0;
+}
+
+int ran(void) 
+    {
+    x=400+rand()%(401);
+    return (x);
+    }
