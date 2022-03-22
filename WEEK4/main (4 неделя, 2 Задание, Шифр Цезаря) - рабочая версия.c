@@ -33,8 +33,6 @@ int main(int argc, char* argv[]) {
     char* str = getStringFromConsoleInput();
     int dlina = strlen(str);
     char* str2 = malloc(dlina);
-    char* str3 = malloc(dlina);
-
     for(int i = 0; i != dlina; i++) {
         if(str[i] != 0) {
             if(((str[i] >= 65) && (str[i] <= 90)) || ((str[i] >= 97) && (str[i] <= 122))){ 
@@ -42,7 +40,6 @@ int main(int argc, char* argv[]) {
                     str[i] = (95 + ((str[i] + k) - 122));
                 if ((str[i] + k) > 90 && (str[i] + k) < 97)
                     str[i] = (63 + ((str[i] + k) - 90));
-            
             str2[i] = str[i] + k;
             }
             else str2[i] = str[i];
