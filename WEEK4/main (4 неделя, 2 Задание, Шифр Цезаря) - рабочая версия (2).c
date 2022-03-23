@@ -32,21 +32,29 @@ int main(int argc, char* argv[]) {
     printf("Get string: ");
     char* str = getStringFromConsoleInput();
     int dlina = strlen(str);
-    char* str2 = malloc(dlina);
+    char* str2 = malloc(sizeof(dlina));
     for(int i = 0; i != dlina; i++) {
         if(str[i] != 0) {
-            if(((str[i] >= 65) && (str[i] <= 90)) || ((str[i] >= 97) && (str[i] <= 122))){ 
+            if((str[i] >= 97) && (str[i] <= 122)) { 
                 if ((str[i] + k) > 122)
-                    str[i] = (95 + ((str[i] + k) - 122));
-                if ((str[i] + k) > 90 && (str[i] + k) < 97)
-                    str[i] = (63 + ((str[i] + k) - 90));
-            str2[i] = str[i] + k;
+                    str2[i] = (96 + ((str[i] + k) - 122));
+                else str2[i] = str[i] + k;
+            }
+            else if  ((str[i] >= 65) && (str[i] <= 90)) { 
+                if ((str[i] + k) > 90)
+                    str2[i] = (64 + ((str[i] + k) - 90));
+                else str2[i] = str[i] + k;
             }
             else str2[i] = str[i];
         }
+            
     }
     printf("Put string: %s\n", str2);
 
+    free(str);
+    str = NULL;
     free(str2);
+    str2 = NULL;
+    
     return 0;
 }
