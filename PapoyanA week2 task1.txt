@@ -1,39 +1,36 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
 
 int main(void) {
-  int a = 0;
-  int b = 0;
-  int c = 0;
-  float x = 0;
-  float x_1 = 0;
-  float x_2 = 0;
-  float d = 0;
+  float a, b, c, x1, x2, D;
+  
+  printf ("ввидте a: ");
+  scanf("%f", &a); //& - указатель на ссылку или передача по ссылке
+  printf ("ввидте b: ");
+  scanf("%f", &b);//принимаем из консоли
+  printf ("ввидте c: ");
+  scanf("%f", &c); 
+  printf("a = %f\nb = %f\nc = %f\n", a, b, c);
+  
+  D = b*b-4*a*c;
+  printf("Дискриминант: %f\n", D);
 
-  scanf("%i", &a);
-  scanf("%i", &b);
-  scanf("%i", &c);
-
- // Дискриминант
-  d = b*b - 4*a*c;
-  //printf("Дискриминант = %f\n", d);
-
-  if (d > 0) {
-  x_1 = (-1*b + sqrt(d)) /2*a;
-  x_2 = (-1*b - sqrt(d)) /2*a;
-  printf("Дискриминант = %f, x_1= %f, x_2= %f\n", d, x_1, x_2);
+  if (D < 0){
+    printf("Корней нет\n");
+    }
+  else if (D == 0){
+    x1 = (-b+sqrt(D)/ 2*a);
+    printf("Корень равняется: %f\n", x1);
   }
-
-  if (d == 0) {
-  x = ((-1*b) /(2*a));             
-  printf("Дискриминант = %f, x= %f\n", d, x);
+  else{
+   x1 = (-b+sqrt(D))/ (2*a);
+   x2 = (-b-sqrt(D))/ (2*a);
+   printf("x1 = %g\nx2 = %g", x1, x2); 
   }
-
-  if (d < 0) {           
-  printf("Дискриминант = %f, у исходного уравнения корней нет.\n", d);
-  }
-
-
-  return x;
+      
+// x1 = (-b+√d) / 2a
+// x2 = (-b-√d) / 2a
+  
+// D = b2-4ac
+  return 0;
 }
