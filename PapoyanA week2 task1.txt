@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+  float a, b, c, x1, x2, D;
+  
+  printf ("ввидте a: ");
+  scanf("%f", &a); //& - указатель на ссылку или передача по ссылке
+  printf ("ввидте b: ");
+  scanf("%f", &b);//принимаем из консоли
+  printf ("ввидте c: ");
+  scanf("%f", &c); 
+  printf("a = %f\nb = %f\nc = %f\n", a, b, c);
+  
+  D = b*b-4*a*c;
+  printf("Дискриминант: %f\n", D);
+
+  if (D < 0){
+    printf("Корней нет\n");
+    }
+  else if (D == 0){
+    x1 = (-b+sqrt(D)/ 2*a);
+    printf("Корень равняется: %f\n", x1);
+  }
+  else{
+   x1 = (-b+sqrt(D))/ (2*a);
+   x2 = (-b-sqrt(D))/ (2*a);
+   printf("x1 = %g\nx2 = %g", x1, x2); 
+  }
+      
+// x1 = (-b+√d) / 2a
+// x2 = (-b-√d) / 2a
+  
+// D = b2-4ac
+  return 0;
+}
