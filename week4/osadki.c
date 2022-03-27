@@ -1,3 +1,11 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
 #include <stdio.h>
 int main()
 {
@@ -8,9 +16,10 @@ int main()
     scanf("%d/n",&god);
     for (i = 0; i < god; i++) {
         mas[i] =400 + rand() %401;
-        sred+=mas[i] / sizeof(mas[i]);
+        sred+=mas[i];
         printf("%d\n", mas[i]);
     }
+    sred=sred / sizeof(mas[i]);
     printf("среднее количество осадков = %d\n", sred);
     for (i = 0; i < god; i++) {
         if (mas[i]>sred)
