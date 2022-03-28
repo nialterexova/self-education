@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    int i, *mas, max, n, d, j;
+    float r,p,L;
+    p=3.14;
+max=0;
+    scanf("%d/n",&n);
+    for (int i = 0; i < n; i++)
+    {
+            scanf("%d\n", &mas[i]);
+    }
+     for (int i = 0; i < n; i+=2)
+     {
+      if (mas[i]+mas[i+1] > max)
+      {
+         max=mas[i]+mas[i+1];
+         r=mas[i]*mas[i]+mas[i+1]*mas[i+1];
+         r=sqrt(r);
+         printf("max =%d r =%f\n", max,r);
+         L=2*p*r;
+      }
+     }
+    printf("Длина окружности =%f",L);  
+    return 0;
+}
